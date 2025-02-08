@@ -5,6 +5,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.gcg_android.feature.home.HomeScreen
 import com.example.gcg_android.feature.login.LoginScreen
 
 @Composable
@@ -13,10 +14,13 @@ fun GCGApp(modifier: Modifier = Modifier) {
 
     NavHost(
         navController = navController,
-        startDestination = "login"
+        startDestination = "home"
     ) {
         composable("login") {
             LoginScreen(modifier, navController)
+        }
+        composable("home") {
+            HomeScreen(modifier, navController)
         }
     }
 }
