@@ -98,7 +98,7 @@ fun LoginScreen(
                 .padding(bottom = 200.dp)
                 .align(Alignment.Center)
                 .size(155.dp),
-            painter = painterResource(R.drawable.bi_house),
+            painter = painterResource(R.drawable.logo),
             contentDescription = "logo"
         )
         Column(

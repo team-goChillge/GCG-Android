@@ -93,19 +93,19 @@ fun TenantScreen(
             modifier = Modifier.padding(top = 200.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp) // 간격 조정
         ) {
-            com.example.gcg_android.feature.signup.lesser.InputField(
+             InputField(
                 label = "아이디",
                 text = idText,
                 onTextChange = { idText = it })
-            com.example.gcg_android.feature.signup.lesser.InputField(
+             InputField(
                 label = "비밀번호",
                 text = pwText,
                 onTextChange = { pwText = it })
-            com.example.gcg_android.feature.signup.lesser.InputField(
+             InputField(
                 label = "전화번호",
                 text = tellText,
                 onTextChange = { tellText = it })
-            com.example.gcg_android.feature.signup.lesser.InputField(
+             InputField(
                 label = "이름",
                 text = name,
                 onTextChange = { name = it })
