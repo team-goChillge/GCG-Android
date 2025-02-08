@@ -5,9 +5,11 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.gcg_android.feature.home.HomeScreen
+import com.example.gcg_android.feature.intro.IntroScreen
 import com.example.gcg_android.feature.login.LoginScreen
 import com.example.gcg_android.feature.signup.SignUpScreen
+import com.example.gcg_android.feature.signup.lesser.LesserScreen
+import com.example.gcg_android.feature.signup.tenant.TenantScreen
 
 @Composable
 fun GCGApp(modifier: Modifier = Modifier) {
@@ -15,16 +17,22 @@ fun GCGApp(modifier: Modifier = Modifier) {
 
     NavHost(
         navController = navController,
-        startDestination = "home"
+        startDestination = "intro"
     ) {
         composable("login") {
             LoginScreen(modifier, navController)
         }
-        composable("home") {
-            HomeScreen(modifier, navController)
+        composable("intro") {
+            IntroScreen(modifier, navController)
         }
         composable("signup") {
             SignUpScreen(modifier, navController)
+        }
+        composable("lesser") {
+            LesserScreen(modifier, navController)
+        }
+        composable("tenant") {
+            TenantScreen(modifier, navController)
         }
     }
 }
