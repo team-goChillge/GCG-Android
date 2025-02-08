@@ -150,7 +150,7 @@ fun LoginScreen(
                     .padding(horizontal = 24.dp)
                     .fillMaxWidth()
                     .padding(top = 20.dp),
-                onClick = { navController.navigate("")},
+                onClick = { navController.navigate("signup")},
                 colors = ButtonDefaults.buttonColors(
                     containerColor = primary400,
                     contentColor = primary400,

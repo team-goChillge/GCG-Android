@@ -88,7 +88,7 @@ fun IntroScreen(
                 .fillMaxWidth()
                 .padding(bottom = 60.dp)
                 .align(Alignment.BottomCenter),
-            onClick = {},
+            onClick = { navController.navigate("signup") },
             colors = ButtonDefaults.buttonColors(
                 containerColor = primary500,
                 contentColor = primary500,
