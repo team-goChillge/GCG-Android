@@ -11,6 +11,8 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.KeyboardArrowLeft
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -18,6 +20,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -44,7 +47,9 @@ fun LoginScreen(
     navController: NavController,
     viewModel: LoginViewModel = viewModel()
 ) {
-    var text by remember { mutableStateOf("") }
+    var idText by remember { mutableStateOf("") }
+    var pwText by remember { mutableStateOf("") }
+
 
     Box(
         modifier = modifier
@@ -67,13 +72,13 @@ fun LoginScreen(
             contentDescription = "login_back_second"
         )
 
-        IconButton(onClick = {} ) {
-            Icon(
+        TextButton(onClick = { navController.navigate("home") }) {
+            Image(
                 modifier = modifier
-
-                    .size(width = 60.dp, height = 20.dp),
+                    .padding(top = 48.dp, start = 10.dp)
+                    .size(width = 24.dp, height = 18.dp),
                 painter = painterResource(R.drawable.left_arrow),
-                contentDescription = "arrow_back",
+                contentDescription = "login_back_second"
             )
         }
 
@@ -86,8 +91,6 @@ fun LoginScreen(
                 cornerRadius = CornerRadius(60f, 60f),
 
             )
-
-
         }
         Image(
             modifier = modifier
@@ -112,8 +115,8 @@ fun LoginScreen(
                 modifier = modifier
                     .fillMaxWidth()
                     .padding(horizontal = 40.dp, vertical = 20.dp),
-                value = text,
-                onValueChange = { text = it },
+                value = idText,
+                onValueChange = { idText = it },
                 placeholder = { Text("아이디를 입력하세요.") },
                 colors = TextFieldDefaults.outlinedTextFieldColors(
                     focusedBorderColor = Color(0xFF404040),
@@ -132,8 +135,8 @@ fun LoginScreen(
                 modifier = modifier
                     .fillMaxWidth()
                     .padding(horizontal = 40.dp, vertical = 20.dp),
-                value = text,
-                onValueChange = { text = it },
+                value = pwText,
+                onValueChange = { pwText = it },
                 placeholder = { Text("비밀번호를 입력하세요.") },
                 colors = TextFieldDefaults.outlinedTextFieldColors(
                     focusedBorderColor = Color(0xFF404040),
@@ -147,7 +150,7 @@ fun LoginScreen(
                     .padding(horizontal = 24.dp)
                     .fillMaxWidth()
                     .padding(top = 20.dp),
-                onClick = {},
+                onClick = { navController.navigate("")},
                 colors = ButtonDefaults.buttonColors(
                     containerColor = primary400,
                     contentColor = primary400,

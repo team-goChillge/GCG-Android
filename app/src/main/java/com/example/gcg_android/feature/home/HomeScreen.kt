@@ -11,6 +11,8 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -53,14 +55,16 @@ fun HomeScreen(
             painter = painterResource(R.drawable.bi_house),
             contentDescription = "logo"
         )
-        Image(
-            modifier = modifier
-                .padding(bottom = 150.dp)
-                .align(Alignment.BottomStart)
-                .size(height = 124.dp, width = 124.dp),
-            painter = painterResource(R.drawable.two_people),
-            contentDescription = "login_back_second"
-        )
+        IconButton(onClick = { navController.navigate("home") }) {
+            Icon(
+                modifier = modifier
+                    .padding(bottom = 150.dp)
+                    .align(Alignment.BottomStart)
+                    .size(height = 124.dp, width = 124.dp),
+                painter = painterResource(R.drawable.two_people),
+                contentDescription = "login_back_second"
+            )
+        }
 
         Button(
             modifier = modifier
