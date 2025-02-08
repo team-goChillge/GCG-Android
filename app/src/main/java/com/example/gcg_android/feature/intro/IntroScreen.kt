@@ -1,4 +1,4 @@
-package com.example.gcg_android.feature.home
+package com.example.gcg_android.feature.intro
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -20,19 +20,17 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.example.gcg_android.R
 import com.example.gcg_android.ui.theme.primary300
-import com.example.gcg_android.ui.theme.primary400
 import com.example.gcg_android.ui.theme.primary500
 
 @Composable
-fun HomeScreen(
+fun IntroScreen(
     modifier: Modifier = Modifier,
     navController: NavController,
-    viewModel: HomeViewModel = viewModel()
+    viewModel: IntroViewModel = viewModel()
 ) {
 
     Box(
