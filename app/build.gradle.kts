@@ -56,4 +56,9 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    implementation(libs.okhttp.logging)
+    implementation(libs.retrofit.core)
+    implementation(libs.retrofit.converter)
+    implementation(libs.androidx.navigation.compose)
 }
