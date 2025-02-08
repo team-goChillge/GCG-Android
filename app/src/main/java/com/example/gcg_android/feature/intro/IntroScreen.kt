@@ -3,6 +3,7 @@ package com.example.gcg_android.feature.intro
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -78,6 +79,7 @@ fun IntroScreen(
                 disabledContentColor = Color.White,
             ),
             shape = RoundedCornerShape(10.dp),
+            contentPadding = PaddingValues(12.dp),
         ) {
             Text(text = "로그인", color = Color.Black)
         }
@@ -95,7 +97,8 @@ fun IntroScreen(
                 disabledContainerColor = primary500,
                 disabledContentColor = primary500,
             ),
-            shape = RoundedCornerShape(10.dp)
+            shape = RoundedCornerShape(10.dp),
+            contentPadding = PaddingValues(12.dp),
         ) {
             Text(text = "회원가입", color = Color.White)
         }
